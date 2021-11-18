@@ -26,10 +26,16 @@ variable "instance_type" {
 
 variable "min_size" {
   description = "The minimum size for the webserver cluster"
-  type       = number
+  type        = number
 }
 
 variable "max_size" {
   description = "The maximum size for the webserver cluster"
-  type       = number
+  type        = number
+}
+
+variable "custom_tags" {
+  description = "Custom tags for the autoscaling group"
+  type        = map(string)
+  default     = {}
 }
